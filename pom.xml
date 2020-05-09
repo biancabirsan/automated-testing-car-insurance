@@ -30,6 +30,27 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.9.8</version>
+      <scope>test</scope>
+    </dependency>
+
+
+    <dependency>
+      <groupId>ru.tinkoff</groupId>
+      <artifactId>tofu-parallel_2.13</artifactId>
+      <version>0.2.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>run-parallel</artifactId>
+      <version>1.1.9</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -73,6 +94,15 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.9</version>
+          <configuration>
+            <forkMode>always</forkMode>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>

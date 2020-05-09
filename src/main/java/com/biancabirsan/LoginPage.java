@@ -13,6 +13,9 @@ public class LoginPage {
 
     private WebDriver driver;
 
+    @FindBy(id = "login")
+    public WebElement loginNavBtn;
+
     @FindBy(id = "login_username")
     private WebElement userField;
 
@@ -28,6 +31,10 @@ public class LoginPage {
 
         // This initElements method will create all web elements
         PageFactory.initElements(driver, this);
+    }
+
+    public void clickLoginNavBtn(){
+        loginNavBtn.click();
     }
 
     public void clickUserField() {

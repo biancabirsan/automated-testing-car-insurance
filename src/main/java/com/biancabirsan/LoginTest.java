@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-    public class LoginTest {
-    public static void main (String args[]) throws Exception{
+public class LoginTest {
+    public static void main(String args[]) throws Exception {
         testUserLogin();
     }
 
-    public static void testUserLogin() throws Exception{
+    public static void testUserLogin() throws Exception {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Laptop\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost/InsuranceProject/index.html");
